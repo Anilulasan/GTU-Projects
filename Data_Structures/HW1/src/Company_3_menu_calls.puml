@@ -1,0 +1,228 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "Company#menu()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": ""
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false // root node is included
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "Company"
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1679829923 { 
+   	label=Company
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_469633996 { 
+   	label=Company
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Company1679829923XXXcheck2013066710[
+	label="+ check()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXcreate_id107927658[
+	label="+ create_id()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXid_check2069022258[
+	label="+ id_check()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXlogin0[
+	label="+ login()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXmenu0[
+	label="+ menu()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXregister0[
+	label="+ register()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+
+Company1679829923XXXshow_branches0[
+	label="+ show_branches()"
+	style=filled
+	fillcolor=white
+	tooltip="Company
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_2390489 { 
+   	label=Main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1706522830 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main2390489XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_63116079 { 
+   	label=Admin
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_74429360 { 
+   	label=Admin
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Admin63116079XXXmenu0[
+	label="+ menu()"
+	style=filled
+	fillcolor=white
+	tooltip="Admin
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Company1679829923XXXcheck2013066710 -> Admin63116079XXXmenu0;
+Company1679829923XXXcheck2013066710 -> Company1679829923XXXid_check2069022258;
+Company1679829923XXXcheck2013066710 -> Company1679829923XXXshow_branches0;
+Company1679829923XXXlogin0 -> Company1679829923XXXcheck2013066710;
+Company1679829923XXXmenu0 -> Company1679829923XXXlogin0;
+Company1679829923XXXmenu0 -> Company1679829923XXXregister0;
+Company1679829923XXXregister0 -> Company1679829923XXXcreate_id107927658;
+Main2390489XXXmain1859653459 -> Company1679829923XXXmenu0;
+    
+}
+@enduml
