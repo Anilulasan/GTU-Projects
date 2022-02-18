@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"ArrayList"},{"p":"<Unnamed>","l":"ColIterator"},{"p":"<Unnamed>","l":"Collection"},{"p":"<Unnamed>","l":"Driver"},{"p":"<Unnamed>","l":"HashSet"},{"p":"<Unnamed>","l":"LinkedList"},{"p":"<Unnamed>","l":"List"},{"p":"<Unnamed>","l":"Queue"},{"p":"<Unnamed>","l":"Set"}];updateSearchResults();
